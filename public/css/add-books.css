@@ -1,0 +1,176 @@
+/* ------------------------------
+   Estilos para la página "Agregar Libro"
+   ------------------------------ */
+
+/* ------------------------------
+   Estilos generales para todo el documento
+   ------------------------------ */
+.dashboard-container {
+  display: flex;
+  flex-direction: row; /* Disposición en fila, con sidebar a la izquierda y contenido a la derecha */
+  height: 100vh; /* La altura total del viewport */
+  background-color: var(
+    --color-background
+  ); /* Usamos el color de fondo definido */
+}
+
+/* ------------------------------
+     Estilos para la zona de contenido principal
+     ------------------------------ */
+.main-content {
+  overflow-y: auto; /* Permite desplazamiento vertical en caso de que el contenido sea mayor que el viewport */
+}
+
+/* ------------------------------
+     Estilos para la sidebar
+     ------------------------------ */
+.sidebar {
+  height: 100%; /* Hace que el sidebar ocupe toda la altura del contenedor */
+  position: sticky; /* Mantiene el sidebar fijo mientras se hace scroll */
+  top: 0; /* Asegura que se quede pegado a la parte superior */
+}
+
+/* ------------------------------
+                 Estilo del dropdown de colecciones
+                 ------------------------------ */
+#collection_id {
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+     Estilos para el formulario
+     ------------------------------ */
+form {
+  display: flex; /* Flexbox para el formulario */
+  flex-direction: column; /* Disposición en columna */
+  gap: 20px; /* Espaciado entre los elementos del formulario */
+}
+
+/* ------------------------------
+         Estilos para las etiquetas del formulario
+         ------------------------------ */
+form label {
+  font-size: 1rem; /* Tamaño de la fuente */
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+         Estilos para los campos de entrada y textarea
+         ------------------------------ */
+form input,
+form textarea,
+form select {
+  padding: 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-family: var(--font-family-base); /* Fuente base */
+  border: 1px solid var(--color-border); /* Borde del campo */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: border-color 0.3s ease; /* Transición suave para el borde */
+  width: 65%; /* Ancho ajustado para una distribución uniforme */
+}
+
+/* ------------------------------
+         Efecto de enfoque (focus) para los campos de entrada y textarea
+         ------------------------------ */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: var(
+    --color-input-focus
+  ); /* Color del borde al estar enfocado */
+  outline: none; /* Sin contorno extra */
+}
+
+/* ------------------------------
+         Estilos para el botón de envío
+         ------------------------------ */
+form button {
+  padding: 12px 20px; /* Espaciado interno */
+  background-color: var(--color-primary); /* Fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de la fuente */
+  cursor: pointer; /* Aparece como puntero */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+  width: 8%; /* Ancho ajustado para el botón */
+}
+
+/* ------------------------------
+         Efecto hover sobre el botón de envío
+         ------------------------------ */
+form button:hover {
+  background-color: var(
+    --color-primary-dark
+  ); /* Fondo más oscuro al pasar el ratón */
+}
+
+/* ------------------------------
+         Estilos para el texto pequeño (small)
+         ------------------------------ */
+small {
+  color: var(--color-text); /* Color del texto */
+  font-family: var(--font-family-base); /* Fuente base */
+}
+
+/* ------------------------------
+         Media query para diseño responsive
+         ------------------------------ */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  main {
+    margin-left: 10px; /* Margen izquierdo reducido */
+    margin-right: 10px; /* Margen derecho reducido */
+  }
+
+  /* Ajustar el tamaño de la fuente del encabezado en pantallas pequeñas */
+  header h1 {
+    font-size: 2.5rem; /* Tamaño de fuente reducido */
+  }
+
+  /* Ancho completo para campos de formulario y botón en pantallas pequeñas */
+  form input,
+  form textarea,
+  form button {
+    width: 100%; /* Ancho completo */
+  }
+}
+
+/* ------------------------------
+     Estilos para la navegación con .nav-tabs
+     ------------------------------ */
+
+.nav-tabs ul {
+  display: flex; /* Asegura que los elementos de la lista estén en línea */
+  gap: 10px; /* Espacio entre los elementos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-tabs ul li {
+  margin: 0; /* Elimina el margen adicional */
+}
+
+.nav-tabs ul li a {
+  text-decoration: none; /* Eliminar subrayado */
+  color: var(--color-text); /* Color del texto */
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  display: block;
+}
+
+.nav-tabs ul li a:hover,
+.nav-tabs ul li a.active {
+  background: var(
+    --color-primary
+  ); /* Fondo al hacer hover o cuando esté activo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra al hacer hover */
+  color: white; /* Color del texto al hacer hover */
+  font-weight: bold; /* Hacer negrita al hacer hover */
+  transform: none; /* Sin desplazamiento */
+}
+.nav-tabs ul li a i {
+  margin-right: 0.4rem;
+}

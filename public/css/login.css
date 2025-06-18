@@ -1,0 +1,191 @@
+/* LOGIN.PHP STYLES */
+
+/* Definición de variables CSS */
+:root {
+  /* Colores */
+  --color-primary: #02b0e0;
+  --color-primary-dark: #028aac;
+  --color-background: #f7f7f7;
+  --color-text: #333;
+  --color-error-bg: #f8d7da;
+  --color-error-text: #ff4d4d;
+  --color-border: #ccc;
+  --color-input-focus: #02b0e0;
+
+  /* Tipografías */
+  --font-family-base: "Roboto", serif;
+  --font-family-heading: "Libre Baskerville", serif;
+  --font-size-base: 1rem;
+  --font-size-heading: 3rem;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--color-background);
+}
+
+/* Background Image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/abstract_natural_background_hand_draw_generated.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Estilo para el encabezado */
+.header-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: fixed; /* Fija el encabezado en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Hace que el encabezado ocupe todo el ancho */
+  z-index: 1000; /* Asegura que el encabezado esté por encima del resto del contenido */
+}
+
+/* Asegurarse de que el logo y el nombre estén alineados */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-left: -50px;
+}
+
+.logo {
+  width: 6rem; /* Ajusta el tamaño del logo */
+  height: auto;
+  margin-top: -30px;
+  margin-right: -20px;
+}
+
+.site-name {
+  color: var(--color-text);
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: 700;
+  margin-top: -30px;
+}
+
+/* Form Container */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: var(--font-family-heading);
+  font-weight: 200;
+  color: var(--color-text);
+}
+
+/* Form Styling */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: var(--font-size-base);
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: var(--color-input-focus);
+  outline: none;
+}
+
+/* Button Styling */
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-base);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Link Styling */
+p {
+  text-align: center;
+  font-size: var(--font-size-base);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: var(--color-error-text);
+  background-color: var(--color-error-bg);
+  border-radius: 5px;
+  font-family: var(--font-family-base);
+  tab-size: var(--font-size-base);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .logo-container {
+    margin-top: -8px;
+  }
+}

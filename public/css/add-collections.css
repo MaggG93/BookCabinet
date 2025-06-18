@@ -1,0 +1,110 @@
+/* ------------------------------
+   Estilos para la página "Add Collections"
+   ------------------------------ */
+
+/* ------------------------------
+   Estilos generales para la cuenta de colecciones
+   ------------------------------ */
+.collection-count {
+  font-size: 1rem; /* Tamaño de la fuente */
+  color: var(--color-text); /* Color del texto */
+  margin-bottom: 20px; /* Margen inferior */
+}
+
+/* ------------------------------
+     Estilos para el formulario
+     ------------------------------ */
+form {
+  display: flex; /* Flexbox para el formulario */
+  flex-direction: column; /* Disposición en columna */
+  gap: 20px; /* Espaciado entre los elementos del formulario */
+}
+
+/* ------------------------------
+     Estilos para las etiquetas del formulario
+     ------------------------------ */
+form label {
+  font-size: 1rem; /* Tamaño de la fuente */
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+     Estilos para los campos de entrada y textarea
+     ------------------------------ */
+form input,
+form textarea {
+  padding: 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-family: var(--font-family-base); /* Fuente base */
+  border: 1px solid var(--color-border); /* Borde del campo */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: border-color 0.3s ease; /* Transición suave para el borde */
+  width: 65%; /* Ancho ajustado para una distribución uniforme */
+}
+
+/* ------------------------------
+     Efecto de enfoque (focus) para los campos de entrada y textarea
+     ------------------------------ */
+form input:focus,
+form textarea:focus {
+  border-color: var(
+    --color-input-focus
+  ); /* Color del borde al estar enfocado */
+  outline: none; /* Sin contorno extra */
+}
+
+/* ------------------------------
+     Estilos para el botón de envío
+     ------------------------------ */
+form button {
+  padding: 12px 20px; /* Espaciado interno */
+  background-color: var(--color-primary); /* Fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de la fuente */
+  cursor: pointer; /* Aparece como puntero */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+  width: 8%; /* Ancho ajustado para el botón */
+}
+
+/* ------------------------------
+     Efecto hover sobre el botón de envío
+     ------------------------------ */
+form button:hover {
+  background-color: var(
+    --color-primary-dark
+  ); /* Fondo más oscuro al pasar el ratón */
+}
+
+/* ------------------------------
+     Estilos para el texto pequeño (small)
+     ------------------------------ */
+small {
+  color: var(--color-text); /* Color del texto */
+  font-family: var(--font-family-base); /* Fuente base */
+}
+
+/* ------------------------------
+     Media query para diseño responsive
+     ------------------------------ */
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  main {
+    margin-left: 10px; /* Margen izquierdo reducido */
+    margin-right: 10px; /* Margen derecho reducido */
+  }
+
+  /* Ajustar el tamaño de la fuente del encabezado en pantallas pequeñas */
+  header h1 {
+    font-size: 2.5rem; /* Tamaño de fuente reducido */
+  }
+
+  /* Ancho completo para campos de formulario y botón en pantallas pequeñas */
+  form input,
+  form textarea,
+  form button {
+    width: 100%; /* Ancho completo */
+  }
+}

@@ -1,0 +1,221 @@
+/* ------------------------------
+   Estilos para configuración (settings)
+   ------------------------------ */
+
+/* ==========================================================================
+   Estructura general y layout
+========================================================================== */
+
+.main-content {
+  overflow-y: auto; /* Permite desplazamiento vertical */
+}
+
+.sidebar {
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+/* ------------------------------
+     Estilos para las filas y columnas
+     ------------------------------ */
+.form-container {
+  padding: 10px; /* Espaciado interno */
+}
+
+/* ------------------------------
+                 Estilo del dropdown de colecciones
+                 ------------------------------ */
+#collection_id {
+  color: var(--color-text); /* Color del texto */
+}
+
+/* Estilos generales para el elemento <details> */
+details {
+  background-color: var(--color-background); /* Fondo del contenedor */
+  border: 1px solid var(--color-border); /* Borde de contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno */
+  margin-top: 20px; /* Espaciado superior */
+  font-family: var(--font-family-base); /* Fuente base */
+  font-size: var(--font-size-base); /* Tamaño de fuente */
+  color: var(--color-text); /* Color del texto */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Transición suave para fondo y sombra */
+}
+
+/* Estilos cuando los detalles están abiertos */
+details[open] {
+  background-color: #ffffff; /* Fondo blanco cuando está abierto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave al abrir */
+}
+
+/* ------------------------------
+     Estilos para el summary dentro de details
+     ------------------------------ */
+
+/* Estilo del summary (el encabezado de detalles) */
+details summary {
+  font-family: var(--font-family-heading); /* Fuente para el encabezado */
+  font-size: 1.5rem; /* Tamaño grande para el título */
+  font-weight: 600; /* Peso de la fuente (semi-negrita) */
+  color: var(--color-primary); /* Color del texto */
+  cursor: pointer; /* Aparece como puntero (clickable) */
+  padding: 12px 15px; /* Espaciado interno */
+  background-color: #f1f1f1; /* Fondo claro para el summary */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transiciones para efectos visuales */
+}
+
+/* Efecto hover sobre el summary */
+details summary:hover {
+  background-color: var(
+    --color-primary
+  ); /* Fondo de color primario al pasar el ratón */
+  color: white; /* Cambiar el color del texto a blanco */
+  transform: translateX(5px); /* Desplazamiento suave hacia la derecha */
+}
+
+/* ------------------------------
+     Estilos para el contenido dentro de details
+     ------------------------------ */
+
+/* Estilos para el contenido dentro de <details> */
+details div {
+  padding-top: 10px; /* Espaciado superior para el contenido */
+  font-size: var(--font-size-base); /* Tamaño de fuente base */
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+     Estilos para los campos de formulario dentro de details
+     ------------------------------ */
+
+/* Estilo para campos de texto y select dentro de <details> */
+details input[type="text"],
+details select {
+  width: 65%; /* Ancho de los campos de texto/select */
+  padding: 12px; /* Espaciado interno */
+  margin: 15px; /* Margen superior e inferior */
+  border: 1px solid var(--color-border); /* Borde del campo */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-family: var(--font-family-base); /* Fuente base */
+}
+
+/* ------------------------------
+       Efecto de enfoque (focus) para los campos de entrada
+       ------------------------------ */
+details input[type="text"],
+select:focus {
+  border-color: var(
+    --color-input-focus
+  ); /* Color del borde al estar enfocado */
+  outline: none; /* Sin contorno extra */
+}
+
+/* ------------------------------
+     Estilos para los botones dentro de details
+     ------------------------------ */
+
+/* Estilo para los botones dentro de <details> */
+details button {
+  background-color: var(--color-primary); /* Fondo de color primario */
+  color: white; /* Color del texto */
+  padding: 12px 20px; /* Espaciado interno */
+  margin-top: 10px; /* Margen superior e inferior */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Aparece como puntero */
+  font-size: 1em; /* Tamaño de la fuente */
+  transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
+}
+
+/* Efecto hover sobre los botones */
+details button:hover {
+  background-color: var(
+    --color-primary-dark
+  ); /* Fondo más oscuro al hacer hover */
+}
+
+/* ------------------------------
+       Estilos para el texto pequeño (small)
+       ------------------------------ */
+small {
+  color: var(--color-text); /* Color del texto */
+  font-family: var(--font-family-base); /* Fuente base */
+}
+
+/* ------------------------------
+   Estilos para el formulario
+------------------------------ */
+
+form {
+  display: flex; /* Flexbox para el formulario */
+  flex-direction: column; /* Disposición en columna */
+  gap: 20px; /* Espaciado entre los elementos del formulario */
+}
+
+/* ------------------------------
+   Estilos para las etiquetas del formulario
+------------------------------ */
+
+form label {
+  font-size: 1rem; /* Tamaño de la fuente */
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+   Estilos para los campos de entrada y textarea
+------------------------------ */
+
+form input,
+form textarea,
+form select {
+  margin: 12px;
+  padding: 12px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-family: var(--font-family-base); /* Fuente base */
+  border: 1px solid var(--color-border); /* Borde del campo */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: border-color 0.3s ease; /* Transición suave para el borde */
+  width: 65%; /* Ancho ajustado para una distribución uniforme */
+}
+
+/* ------------------------------
+   Efecto de enfoque (focus) para los campos
+------------------------------ */
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: var(
+    --color-input-focus
+  ); /* Color del borde al estar enfocado */
+  outline: none; /* Sin contorno extra */
+}
+
+/* ------------------------------
+   Estilos para el botón de envío
+------------------------------ */
+
+form button {
+  padding: 12px 20px; /* Espaciado interno */
+  background-color: var(--color-primary); /* Fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de la fuente */
+  cursor: pointer; /* Aparece como puntero */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de fondo */
+  width: 8%; /* Ancho ajustado para el botón */
+}
+
+/* ------------------------------
+   Efecto hover sobre el botón de envío
+------------------------------ */
+
+form button:hover {
+  background-color: var(
+    --color-primary-dark
+  ); /* Fondo más oscuro al pasar el ratón */
+}

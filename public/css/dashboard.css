@@ -1,0 +1,164 @@
+/* ------------------------------
+   Estilos generales para todo el documento
+   ------------------------------ */
+.dashboard-container {
+  display: flex;
+  flex-direction: row; /* Disposición en fila, con sidebar a la izquierda y contenido a la derecha */
+  height: 100vh; /* La altura total del viewport */
+  background-color: var(
+    --color-background
+  ); /* Usamos el color de fondo definido */
+}
+/* ------------------------------
+     Estilos para la sidebar
+     ------------------------------ */
+.sidebar {
+  height: 100%; /* Hace que el sidebar ocupe toda la altura del contenedor */
+  position: sticky; /* Mantiene el sidebar fijo mientras se hace scroll */
+  top: 0; /* Asegura que se quede pegado a la parte superior */
+}
+
+/* ------------------------------
+     Estilos para el header de la página
+     ------------------------------ */
+header h1 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* ------------------------------
+     Estilos para la zona de contenido principal
+     ------------------------------ */
+.main-content {
+  flex: 1; /* Deja que el contenido crezca y ocupe el espacio restante */
+  padding: 10px; /* Espaciado interno */
+  overflow-y: auto; /* Permite desplazamiento vertical en caso de que el contenido sea mayor que el viewport */
+  background-color: var(--color-background); /* Fondo del área de contenido */
+  font-family: var(--font-family-base); /* Usamos la fuente base definida */
+}
+
+/* ------------------------------
+                 Estilo del dropdown de colecciones
+                 ------------------------------ */
+.collection-dropdown {
+  width: 65%; /* Hace que el dropdown ocupe todo el ancho disponible */
+  margin-left: 12px;
+  padding: 12px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espaciado inferior */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid var(--color-border); /* Borde suave */
+  font-size: 1rem; /* Tamaño de la fuente */
+  color: var(--color-text); /* Color del texto */
+}
+
+/* ------------------------------
+                 focus del select de colecciones
+                 ------------------------------ */
+select:focus {
+  border-color: var(
+    --color-input-focus
+  ); /* Color del borde al estar enfocado */
+  outline: none; /* Sin contorno extra */
+}
+
+/* ------------------------------
+                 Estilos para el contenedor de los libros
+                 ------------------------------ */
+#booksContainer {
+  display: grid; /* Usamos un grid para organizar los libros */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Cada columna tiene un tamaño mínimo de 250px, pero se ajusta según el espacio disponible */
+  grid-auto-rows: minmax(
+    250px,
+    auto
+  ); /* Fila de libros con altura mínima de 250px */
+  margin-top: 20px; /* Espaciado superior */
+  gap: -20px; /* Espacio entre cada libro */
+}
+
+/* ------------------------------
+                 Estilo de cada libro en el grid
+                 ------------------------------ */
+.book-item {
+  text-align: center; /* Centrar el contenido de cada libro */
+  padding: 10px; /* Espaciado interno */
+  transition: transform 0.2s ease-in-out; /* Suave transición para el efecto hover */
+  overflow: hidden; /* Evitar que el contenido se desborde fuera del contenedor */
+}
+
+/* ------------------------------
+                 Efecto hover para los libros
+                 ------------------------------ */
+.book-item:hover {
+  transform: translateY(
+    -5px
+  ); /* Eleva el libro ligeramente al pasar el ratón */
+}
+
+/* ------------------------------
+                 Estilo del título del libro
+                 ------------------------------ */
+.book-item small {
+  font-size: var(--font-size-base); /* Tamaño de fuente para el título */
+  color: var(--color-text); /* Color del título con el color primario oscuro */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* ------------------------------
+                 Estilo del autor del libro
+                 ------------------------------ */
+.book-item p {
+  color: var(--color-text); /* Color del texto del autor */
+  font-size: 1rem; /* Tamaño de fuente normal */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* ------------------------------
+                 Estilo de la imagen del libro
+                 ------------------------------ */
+.book-item img {
+  border-radius: 5px;
+  transition: filter 0.5s ease;
+  width: 140px; /* ancho un poco menor */
+  height: 210px; /* alto manteniendo proporción 2:3 */
+  object-fit: cover;
+}
+
+.book-item img:hover {
+  filter: brightness(65%);
+}
+
+/* ------------------------------
+                 Mensaje cuando no hay libros
+                 ------------------------------ */
+#booksContainer p {
+  font-size: 1.2em; /* Tamaño de fuente más grande */
+  color: var(--color-text); /* Color del texto */
+  text-align: center; /* Centrar el mensaje */
+}
+
+.book-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+/* ------------------------------
+                 Estilo para el buscador
+                 ------------------------------ */
+
+.book-search-input {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.book-search-input:focus {
+  border-color: var(--color-input-focus);
+  outline: none;
+}
