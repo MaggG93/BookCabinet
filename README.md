@@ -20,6 +20,23 @@ BookCabinet is a comprehensive book cataloging project designed to organize and 
   <img src="https://github.com/user-attachments/assets/f3892abc-f89f-420c-8c8a-6a7940b1f7a4" alt="Screenshot 5" width="45%" style="margin: 10px;" />
 </div>
 
+## Installation
+
+To run BookCabinet locally, follow these steps:
+
+### Requirements
+
+- A local server environment like **XAMPP** or **WAMP**
+- **PHP** 7.4 or higher
+- **MySQL** database
+- A modern web browser
+
+### Steps
+
+1. **Clone or download** this repository:
+   ```bash
+   git clone https://github.com/yourusername/BookCabinet.git
+
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request. 
