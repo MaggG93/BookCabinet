@@ -10,17 +10,15 @@ BookCabinet is a comprehensive book cataloging project designed to organize and 
 - **Export and Backup:** Option to export your catalog data for backup or sharing purposes.
 - **Customization:** Personalize your book entries with notes, ratings, and categorization.
 
-- ## Screenshots
+## Screenshots
 
-![{13AD1A64-E165-43E7-A200-766B41FE1347}](https://github.com/user-attachments/assets/50693757-f6ae-40c6-9453-a4b3d6d32912)
-
-![{FD400D05-03A0-486F-8933-B299D6C19E86}](https://github.com/user-attachments/assets/0955d243-c4cd-4710-bd13-8d3621e0dc29)
-
-![{1C64371C-4ED5-465D-B4A1-95B839665D47}](https://github.com/user-attachments/assets/4edcea4c-406c-4645-853c-60de1a840701)
-
-![{FD9718F1-C6FD-4AA3-BD58-4103D10BBF10}](https://github.com/user-attachments/assets/be1b83f8-387a-4386-a0c5-3e1a7fb8d0c2)
-
-![{C6DBD7A7-18F2-4860-A6B5-EBBF777A3D53}](https://github.com/user-attachments/assets/f3892abc-f89f-420c-8c8a-6a7940b1f7a4)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/50693757-f6ae-40c6-9453-a4b3d6d32912" alt="Screenshot 1" width="45%" style="margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/0955d243-c4cd-4710-bd13-8d3621e0dc29" alt="Screenshot 2" width="45%" style="margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/4edcea4c-406c-4645-853c-60de1a840701" alt="Screenshot 3" width="45%" style="margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/be1b83f8-387a-4386-a0c5-3e1a7fb8d0c2" alt="Screenshot 4" width="45%" style="margin: 10px;" />
+  <img src="https://github.com/user-attachments/assets/f3892abc-f89f-420c-8c8a-6a7940b1f7a4" alt="Screenshot 5" width="45%" style="margin: 10px;" />
+</div>
 
 ## Contributing
 
